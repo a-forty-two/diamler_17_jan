@@ -1,0 +1,565 @@
+Lab Steps: Visualizing Data in Excel
+
+Lab: Data Visualizations in Excel
+Exercise 1: Generate a Tabular Report for the Sales Data
+Task 1: Examine the Existing Data Model
+1.
+
+Ensure that you have Excel installed in the local machine. Download the files from https://github.com/MicrosoftLearning/Analyzing-Visualizing-Data-Excel/archive/refs/heads/master.zip
+and extract to 'D:\Labfiles' or any other folder. 
+
+2.
+
+Using File Explorer, browse to the folder D:\Labfiles\Lab07\Starter, and then double-click the file VanArsdel_Sales.xlsx.
+
+3.
+
+On the Power Pivot ribbon, click Manage.
+
+4.
+
+In the Power Pivot for Excel – VanArsdel_Sales.xlsx window, on the Home ribbon, click Diagram View.
+
+5.
+
+Review the diagram.
+
+6.
+
+Close the Power Pivot window.
+
+Task 2: Create the Report
+1.
+
+At the bottom of the Sheet1 worksheet, right-click the Sheet1 tab, click Rename, type SalesData, and then press Enter.
+
+2.
+
+In the SalesData worksheet, on the Page Layout ribbon, in the Sheet Options section, under Gridlines, clear View.
+
+3.
+
+Click cell B4 on the worksheet.
+
+4.
+
+On the Insert ribbon, in the Tables section, click PivotTable.
+
+5.
+
+In the Create PivotTable dialog box, select Use this workbook's Data Model, select Existing Worksheet, make sure the location is set to SalesData!$B$4, and then click OK.
+
+6.
+
+In the PivotTableFields pane, in the list of tables, expand Products, expand More Fields, and drag Category into the ROWS box.
+
+7.
+
+In the list of tables, expand Manufacturer, and drag Manufacturer into the ROWS box below Category.
+
+8.
+
+In the list of tables, expand Calendar, expand More Fields, and drag Month into the COLUMNS box.
+
+9.
+
+In the list of tables, and drag Total Units into the VALUES box.
+
+10.
+
+On the worksheet, click the Total Units label in cell B4.
+
+11.
+
+On the Design ribbon, in the Layout section, click Report Layout, and then click Show In Tabular Form.
+
+12.
+
+On the Design ribbon, in the Layout section, click Blank Rows, and then click Insert Blank Line after Each Item.
+
+13.
+
+In the PivotTable Fields pane, in the list of tables, expand Calendar, expand More Fields, and drag Year into the FILTERS box.
+
+14.
+
+The filter should appear in cell B2.
+
+Task 3: Review the Report
+•
+
+Click the Year filter to switch between sales data for different years.
+
+Result: In this exercise, you should have created a PivotTable that summarizes the report data for VanArsdel.
+
+Exercise 2: Create Part-to-Whole Charts for the Sales Data
+Task 1: Create the Sales by Category Pie Chart
+1.
+
+Below the SalesData worksheet, click +.
+
+This action creates a new worksheet named Sheet1.
+
+2.
+
+Right-click the Sheet1 tab, click Rename, type Charts, and then press Enter.
+
+3.
+
+In the Charts worksheet, on the Page Layout ribbon, in the Sheet Options section, under Gridlines, clear View.
+
+4.
+
+On the Insert ribbon, in the Charts section, click PivotChart, and then click PivotChart.
+
+5.
+
+In the Create PivotChart dialog box, select Use this workbook's Data Model, select Existing Worksheet, in the Location box type Charts!$F$2, and then click OK.
+
+6.
+
+In the PivotChart Fields pane, expand Products, expand More Fields, and drag Category into the AXIS (CATEGORY) box.
+
+7.
+
+In the PivotChart Fields pane, expand Sales, and drag TotalUnits into the VALUES box.
+
+8.
+
+Click the graph in the Charts worksheet.
+
+9.
+
+On the Design ribbon, click Change Chart Type.
+
+10.
+
+In the Change Chart Type dialog box, click Pie, and then click OK.
+
+11.
+
+Click the graph in the Charts worksheet.
+
+12.
+
+On the Analyze ribbon, click Field Buttons, and then clear Show Axis Field Buttons and Show Value Field Buttons.
+
+13.
+
+Click the graph in the Charts worksheet.
+
+14.
+
+On the Design ribbon, click Add Chart Element, click Data Labels, and then click Data Callout.
+
+15.
+
+On the Design ribbon, click Add Chart Element, click Data Labels, and then click More Data Label Options.
+
+16.
+
+In the Format Data Labels pane, ensure Value, Percentage, and ShowLeader Lines are selected, and that Category Name is clear. In the Separator drop-down list, click (New Line).
+
+Note: You might need to click another value, such as (space) first, before the (New Line) setting takes effect.
+
+17.
+
+Click the graph title (displaying Total), delete the existing text, and then type Sales by Category.
+
+18.
+
+Click the worksheet, outside of the graph.
+
+19.
+
+On the Insert ribbon, click Slicer.
+
+20.
+
+If the Microsoft Excel Security Notice dialog box appears, click OK.
+
+21.
+
+In the Existing Connections dialog box, click the Data Model tab, and then click Open.
+
+22.
+
+In the Insert Slicers dialog box, expand Calendar, expand More Fields, select Month, select Year, and then click OK.
+
+23.
+
+Move the slicers on the worksheet to the left of the pie chart.
+
+24.
+
+Click the Year slicer.
+
+25.
+
+On the Options ribbon, click Report Connections.
+
+26.
+
+In the Report Connections dialog box, select the connection on the Charts worksheet, and then click OK.
+
+27.
+
+Click the Month slicer.
+
+28.
+
+On the Options ribbon, click Report Connections.
+
+29.
+
+In the Report Connections dialog box, select the connection on the Charts worksheet, and then click OK.
+
+30.
+
+Click the Years slicer.
+
+31.
+
+On the Options ribbon, click Slicer Settings.
+
+32.
+
+In the Slicer Settings dialog box, select Hide items with no data, and then click OK.
+
+33.
+
+Verify that the slicers work as expected:
+
+a.
+
+Select a year to display all the unit sales for the year.
+
+b.
+
+Select a month to home in on a specific month in that year.
+
+c.
+
+Select a range of months to display the sales for the specified period.
+
+Task 2: Create the Sales by Manufacturer Pie Chart
+1.
+
+Click the worksheet, outside of the graph.
+
+2.
+
+On the Insert ribbon, in the Charts section, click PivotChart, and then click PivotChart.
+
+3.
+
+In the Create PivotChart dialog box, select Use this workbook's Data Model, select Existing Worksheet, in the Location box type Charts!$F$24, and then click OK.
+
+4.
+
+In the PivotChart Fields pane, expand Manufacturer, and drag Manufacturer into the AXIS (CATEGORY) box.
+
+5.
+
+In the PivotChart Fields pane, expand sales, and drag Total Units into the VALUES box.
+
+6.
+
+Click the graph in the Charts worksheet.
+
+7.
+
+On the Design ribbon, click Change Chart Type.
+
+8.
+
+In the Change Chart Type dialog box, click Pie, and then click OK.
+
+9.
+
+Click the graph in the Charts worksheet.
+
+10.
+
+On the Analyze ribbon, click Field Buttons, and then clear Show Axis Field Buttons and Show Value Field Buttons.
+
+11.
+
+Click the graph in the Charts worksheet.
+
+12.
+
+On the Design ribbon, click Add Chart Element, click Data Labels, and then click Data Callout.
+
+13.
+
+On the Design ribbon, click Add Chart Element, click Data Labels, and then click More Data Label Options.
+
+14.
+
+In the Format Data Labels pane, ensure Value, Percentage, and ShowLeader Lines are selected, and that Category Name is clear. In the Separator drop-down list, click (New Line).
+
+15.
+
+Click the graph title (displaying Total), delete the existing text, and then type Sales by Manufacturer.
+
+16.
+
+Click the worksheet, outside of the graph.
+
+17.
+
+On the Insert ribbon, click Slicer.
+
+18.
+
+In the Existing Connections dialog box, click the Data Model tab, and then click Open.
+
+19.
+
+In the Insert Slicers dialog box, expand Manufacturer, select Manufacturer, and then click OK.
+
+20.
+
+Move the slicer on the worksheet below the slicers for year and month.
+
+21.
+
+Click the Manufacturer slicer.
+
+22.
+
+On the Options ribbon, click Report Connections.
+
+23.
+
+In the Report Connections dialog box, select both connections on the Charts worksheet, and then click OK.
+
+24.
+
+Click the Month slicer.
+
+25.
+
+On the Options ribbon, click Report Connections.
+
+26.
+
+In the Report Connections dialog box, select the new connection on the Charts worksheet, leave the existing connection selected, and then click OK.
+
+27.
+
+Click the Year slicer.
+
+28.
+
+On the Options ribbon, click Report Connections.
+
+29.
+
+In the Report Connections dialog box, select the new connection on the Charts worksheet, leave the existing connection selected, and then click OK.
+
+30.
+
+Verify that all three slicers affect the data displayed by both charts.
+
+Result: At the end of this exercise, you should have created a pair of interactive pie charts that a business analyst can use to compare the volumes of unit sales by category and by manufacturer.
+
+Exercise 3: Create Charts to Detect Sales Trends
+Task 1: Create the Total Sales by Month Chart
+1.
+
+Below the Charts worksheet, click +.
+
+This action creates a new worksheet named Sheet2.
+
+2.
+
+Right-click the Sheet2 tab, click Rename, type SalesTrends, and then press Enter.
+
+3.
+
+In the SalesTrends worksheet, on the Page Layout ribbon, in the Sheet Options section, under Gridlines, clear View.
+
+4.
+
+On the Insert ribbon, in the Charts section, click PivotChart, and then click PivotChart.
+
+5.
+
+In the Create PivotChart dialog box, select Use this workbook's Data Model, select Existing Worksheet, in the Location box type SalesTrends!$F$4, and then click OK.
+
+6.
+
+In the PivotChart Fields pane, expand Calendar, expand More Fields, and drag Month into the AXIS (CATEGORY) box.
+
+7.
+
+In the PivotChart Fields pane, expand Sales, and drag Total Units into the VALUES box.
+
+8.
+
+Click the graph in the SalesTrends worksheet.
+
+9.
+
+On the Design ribbon, click Change Chart Type.
+
+10.
+
+In the Change Chart Type dialog box, click Line, and then click OK.
+
+11.
+
+Click the graph in the SalesTrends worksheet.
+
+12.
+
+On the Analyze ribbon, click Field Buttons, and then clear Show Axis Field Buttons and Show Value Field Buttons.
+
+13.
+
+Click the graph title (displaying Total), delete the existing text, and then type Total Sales by Month.
+
+14.
+
+Click the worksheet, outside of the graph.
+
+15.
+
+On the Insert ribbon, click Slicer.
+
+16.
+
+In the Existing Connections dialog box, click the Data Model tab, and then click Open.
+
+17.
+
+In the Insert Slicers dialog box, expand Calendar, expand More Fields, select Year, and then click OK.
+
+18.
+
+Move the slicer on the worksheet to the left of the line graph.
+
+19.
+
+Click the Year slicer.
+
+20.
+
+On the Options ribbon, click Report Connections.
+
+21.
+
+In the Report Connections dialog box, select the connection on the SalesTrends worksheet, and then click OK.
+
+22.
+
+On the Options ribbon, click Slicer Settings.
+
+23.
+
+In the Slicer Settings dialog box, select Hide items with no data, and then click OK.
+
+Task 2: Create the Sales by Month by Manufacturer Chart
+1.
+
+Click the worksheet, outside of the graph.
+
+2.
+
+On the Insert ribbon, in the Charts section, click PivotChart, and then click PivotChart.
+
+3.
+
+In the Create PivotChart dialog box, select Use this workbook's Data Model, select Existing Worksheet, in the Location box type SalesTrends!$E$24, and then click OK.
+
+4.
+
+In the PivotChart Fields pane, expand Calendar, expand More Fields, and drag Month into the AXIS (CATEGORY) box.
+
+5.
+
+In the PivotChart Fields pane, expand Manufacturer, and drag Manufacturer into the LEGEND (SERIES) box.
+
+6.
+
+In the PivotChart Fields pane, expand Sales, and drag Total Units into the VALUES box.
+
+7.
+
+Click the graph in the SalesTrends worksheet.
+
+8.
+
+On the Design ribbon, click Change Chart Type.
+
+9.
+
+In the Change Chart Type dialog box, click Line, and then click OK.
+
+10.
+
+Click the graph in the SalesTrends worksheet.
+
+11.
+
+On the Analyze ribbon, click Field Buttons, and then clear Show Axis Field Buttons, Show Value Field Buttons, and Show Legend Field Buttons.
+
+12.
+
+Click the graph in the SalesTrends worksheet.
+
+13.
+
+On the Design ribbon, click Add Chart Element, click Chart Title, click Above Chart, click the graph title, delete the existing text, and then type Sales by Month by Manufacturer.
+
+14.
+
+Click the worksheet outside of the graph.
+
+15.
+
+On the Insert ribbon, click Slicer.
+
+16.
+
+In the Existing Connections dialog box, click the Data Model tab, and then click Open.
+
+17.
+
+In the Insert Slicers dialog box, expand Manufacturer, select Manufacturer, and then click OK.
+
+18.
+
+Move the slicer on the worksheet below the slicer for year.
+
+19.
+
+Click the Manufacturer slicer.
+
+20.
+
+On the Options ribbon, click Report Connections.
+
+21.
+
+In the Report Connections dialog box, select the connection for the second graph on the SalesTrends worksheet, and then click OK.
+
+22.
+
+Click the Year slicer.
+
+23.
+
+On the Options ribbon, click Report Connections.
+
+24.
+
+In the Report Connections dialog box, select the new connection on the SalesTrends worksheet, leave the existing connection selected, and then click OK.
+
+25.
+
+Verify that both slicers affect the data displayed by both charts.
+
+Result: In this exercise, you should have created a report that displays line charts that business analysts can use to track sales by month overall, and for each manufacturer.
