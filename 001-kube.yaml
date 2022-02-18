@@ -28,6 +28,6 @@ spec:
     spec:
       containers:
       - name: newapi
-        image: afortytwo/newapi
+        image: afortytwo/newapi:tag
         ports:
         - containerPort: 5000
