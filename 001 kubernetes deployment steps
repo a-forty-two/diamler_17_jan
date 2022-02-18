@@ -1,0 +1,20 @@
+az aks get-credentials --resource-group rgname --name aksname
+
+kubectl get nodes
+/* to get number of machines*/
+
+
+kubectl get services
+/* verify no deployments EXCEPT internal kube control plane! it does NOT have an external IP address, only internal*/
+
+/* PREPARE a YAML file- my.yaml */ 
+
+kubectl apply -f my.yaml 
+
+/*wait for a few mins */
+
+kubectl get services
+/* note the external IP of the new created service*/
+
+/*if error*/
+kubectl get pods 
