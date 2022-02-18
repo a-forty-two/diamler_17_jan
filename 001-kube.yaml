@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: newapi
+spec:
+  selector:
+    app: newapi
+  ports:
+  - protocol: "TCP"
+    port: 80
+    targetPort: 5000
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: newapi
+spec:
+  selector:
+    matchLabels:
+      app: newapi
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: newapi
+    spec:
+      containers:
+      - name: newapi
+        image: afortytwo/newapi
+        ports:
+        - containerPort: 5000
